@@ -1,0 +1,18 @@
+# Basic
+.DS_Store
+
+# IDE
+/.idea
+/.vscode
+
+# Project
+/package-lock.json
+/node_modules
+/dist
+
+it.js
+it.d.ts
+de.js
+de.d.ts
+en.js
+en.d.ts
