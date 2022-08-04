@@ -24,8 +24,6 @@ Second, you add the custom language packages to your project.
 ```js
 import { setLocale } from 'yup'
 import { en, it, de } from '@aboutbits/yup-locales'
-import { LocaleObject } from 'yup/lib/locale'
-import { Language } from '../components/support/types'
 
 // If you want that your app returns Italian error messages.
 setLocale(it)
