@@ -1,7 +1,7 @@
 {
-  "name": "@aboutbits/yup-locales",
+  "name": "@aboutbits/yup-locales-formatjs",
   "version": "0.0.2",
-  "description": "Custom yup locales",
+  "description": "Custom yup locales for formatjs",
   "keywords": [
     "yup",
     "internationalization",
@@ -11,10 +11,15 @@
   "author": "AboutBits",
   "license": "MIT",
   "private": false,
-  "main": "en.js",
-  "typings": "en.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.build.cjs.json",
+    "build:esm": "tsc --project tsconfig.build.esm.json",
+    "translations:extract": "formatjs extract 'src/**/*.{js,ts}' --out-file translations-template.json --format simple",
+    "translations:diff": "echo 'de:' && json-diff --keys-only src/translations/de.json translations-template.json && echo 'it:' && json-diff --keys-only src/translations/it.json translations-template.json",
     "lint": "eslint --ext js,ts,tsx src",
     "lint:fix": "npm run lint -- --fix",
     "typecheck": "tsc --noEmit",
@@ -29,13 +34,7 @@
     "url": "git+https://github.com/aboutbits/yup-locales.git"
   },
   "files": [
-    "readme.md",
-    "it.js",
-    "it.d.ts",
-    "de.js",
-    "de.d.ts",
-    "en.js",
-    "en.d.ts"
+    "dist/"
   ],
   "publishConfig": {
     "access": "public"
@@ -49,6 +48,7 @@
     "node": "^16"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.0.1",
     "@types/jest": "^28.1.3",
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
@@ -57,12 +57,17 @@
     "babel-loader": "^8.2.5",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-formatjs": "^4.6.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
+    "json-diff": "^1.0.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
     "yup": "^0.32.11"
+  },
+  "dependencies": {
+    "react-intl": "^6.2.8"
   }
 }
