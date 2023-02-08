@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "./",
-    "strict": true,
-    "esModuleInterop": true
+    "importHelpers": true,
+    "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__test__/*", "**/__tests__/*"]
+  "exclude": ["node_modules"]
 }

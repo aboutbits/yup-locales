@@ -9,7 +9,8 @@
   "plugins": [
     "@typescript-eslint",
     "import",
-    "prettier"
+    "prettier",
+    "formatjs"
   ],
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -26,6 +27,10 @@
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "formatjs/enforce-default-message": ["error", "literal"],
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/enforce-id": "error",
     "import/order": [
       "error",
       {
