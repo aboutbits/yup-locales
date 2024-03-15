@@ -45,8 +45,8 @@
   },
   "homepage": "https://github.com/aboutbits/yup-locales#readme",
   "engines": {
-    "npm": "^8",
-    "node": "^16"
+    "npm": ">=8",
+    "node": ">=16"
   },
   "devDependencies": {
     "@types/jest": "^28.1.3",
