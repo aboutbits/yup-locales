@@ -8,10 +8,15 @@
 # Project
 /node_modules
 /dist
-
 it.js
 it.d.ts
 de.js
 de.d.ts
 en.js
 en.d.ts
+
+# Build
+*.tsbuildinfo
+
+# ESLint
+.eslintcache
