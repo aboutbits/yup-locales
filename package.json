@@ -35,7 +35,9 @@
     "de.js",
     "de.d.ts",
     "en.js",
-    "en.d.ts"
+    "en.d.ts",
+    "ru.js",
+    "ru.d.ts"
   ],
   "publishConfig": {
     "access": "public"
