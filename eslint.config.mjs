@@ -6,16 +6,6 @@ export default defineConfig([
   ts,
   jest,
   {
-    rules: {
-      'import/order': [
-        'error',
-        {
-          groups: ['builtin', 'external', 'unknown', 'parent', 'sibling', 'index'],
-        },
-      ],
-    },
-  },
-  {
     ignores: [
       'node_modules',
       'it.js',
