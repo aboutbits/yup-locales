@@ -1,12 +1,12 @@
 import {
-  MixedLocale,
-  StringLocale,
-  NumberLocale,
-  DateLocale,
-  BooleanLocale,
-  ObjectLocale,
   ArrayLocale,
+  BooleanLocale,
+  DateLocale,
   LocaleObject,
+  MixedLocale,
+  NumberLocale,
+  ObjectLocale,
+  StringLocale,
 } from 'yup/es/locale'
 
 export const mixed: Required<MixedLocale> = {
